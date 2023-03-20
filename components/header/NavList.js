@@ -28,13 +28,13 @@ const NavList = () => {
             </li>
 
             <li>
-                <IconButton grey={true}>
+                <IconButton grey={true} title={'Dashboard'}>
                     <BiUser />
                 </IconButton>
             </li>
 
             <li>
-                <IconButton>
+                <IconButton title={'Connect to Wallet'}>
                     <BiWallet />
                 </IconButton>
             </li>

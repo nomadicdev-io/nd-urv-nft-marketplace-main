@@ -41,4 +41,10 @@ export const StyledPageBGImage = styled(Image)`
     display: block;
     width: 100%;
     height: auto;
+`;
+
+export const StyledPageMain = styled.main`
+    position: relative;
+    display: block;
+    width: 100%;
 `

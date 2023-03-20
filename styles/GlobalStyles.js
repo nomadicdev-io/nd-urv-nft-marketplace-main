@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const theme = {
     primaryColor: '#00F388',
     secondaryColor: '#00c16c',
+    thirdColor: '#d3d3d321',
     backgroundColor: '#131313',
     textColor: 'rgba(255, 255, 255, 1)',
     greyColor: '#1e1e1e',
