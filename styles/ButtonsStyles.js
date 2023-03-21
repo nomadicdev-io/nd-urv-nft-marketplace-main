@@ -18,25 +18,26 @@ export const StyledIconButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 0.65rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 1.5rem;
     outline: none;
     border: none;
-    background-color: ${(props)=> props.grey ? props.theme.greyColor : props.theme.primaryColor};
+    background-color: ${(props)=> props.grey ? props.theme.thirdColor : props.theme.primaryColor};
     cursor: pointer;
     transition: all 0.3s ease;
+    backdrop-filter: ${(props)=> props.grey ? 'blur(3px)' : 'blur(0px)'};
+    color: ${(props)=> props.grey ? props.theme.textColor : props.theme.backgroundColor};
 
     svg{
-        color: ${(props)=> props.grey ? props.theme.textColor : props.theme.backgroundColor};
         width: 1.25rem;
         height: auto;
         display: block;
     }
 
     &:hover{
-        transform: translateY(-10%);
-        box-shadow: 1px 6px 10px ${(props)=> props.grey ? props.theme.greyColor : props.theme.secondaryColor};
+        background-color: ${(props)=> props.grey ? props.theme.textColor : props.theme.textColor};
+        color: ${(props)=> props.grey ? props.theme.backgroundColor : props.theme.backgroundColor};
     }
 `;
 
@@ -45,10 +46,11 @@ export const StyledPrimaryButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-gap: 0.5em;
     width: auto;
     padding: 0 1.5em;
     height: 2.75rem;
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
     outline: none;
     border: none;
     background-color: ${(props)=> props.grey ? props.theme.thirdColor : props.theme.primaryColor};
@@ -57,11 +59,26 @@ export const StyledPrimaryButton = styled.button`
     font-size: 0.9rem;
     color: ${(props)=> props.grey ? props.theme.textColor : props.theme.backgroundColor};
     font-weight: 600;
+    backdrop-filter: ${(props)=> props.grey ? 'blur(3px)' : 'blur(0px)'};
+
+    span{
+        position: relative;
+        display: block;
+    }
+
+    svg{
+        display: block;
+        width: 1rem;
+        height: auto;
+        color: ${(props)=> props.grey ? props.theme.textColor : props.theme.backgroundColor};
+    }
 
     &:hover{
-        transform: translateY(-10%);
-        box-shadow: 1px 6px 10px ${(props)=> props.grey ? props.theme.thirdColor : props.theme.secondaryColor};
+        background-color: ${(props)=> props.grey ? props.theme.textColor : props.theme.textColor};
+        color: ${(props)=> props.grey ? props.theme.backgroundColor : props.theme.backgroundColor};
     }
 `
 
 export const StyledPrimaryButtonLink = StyledPrimaryButton.withComponent(Link);
+
+export const StyledIconButtonLink = StyledIconButton.withComponent(Link);

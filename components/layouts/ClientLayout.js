@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer"
 import Header from "../header/Header"
 import PageBG from "../PageBG"
 
@@ -7,6 +8,7 @@ const ClientLayout = ({children}) => {
         <PageBG />
         <Header />
         {children}
+        <Footer />
     </>
   )
 }

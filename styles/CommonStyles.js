@@ -9,6 +9,11 @@ export const StyledContainer = styled.div`
     padding-inline: 15px;
     margin-inline: auto;
 
+    @media only screen and (min-width: 1920px){
+        max-width: 1440px;
+        min-width: 1440px;
+    }
+
     @media only screen and (max-width: 1360px){
         max-width: 1024px;
         min-width: 1024px;
@@ -47,4 +52,12 @@ export const StyledPageMain = styled.main`
     position: relative;
     display: block;
     width: 100%;
-`
+`;
+
+export const StyledPageSection = styled.section`
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 7.5rem;
+`;

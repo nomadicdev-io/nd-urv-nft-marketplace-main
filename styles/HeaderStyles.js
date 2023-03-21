@@ -81,11 +81,12 @@ export const StyledSearchForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 2.5rem;
-    border-radius: 0.65rem;
+    height: 2.75rem;
+    border-radius: 1.5rem;
     width: 20rem;
-    background-color: ${(props)=> props.theme.greyColor};
-
+    background-color: ${(props)=> props.theme.thirdColor};
+    backdrop-filter: ${(props)=> props.grey ? 'blur(3px)' : 'blur(0px)'};
+    
     input{
         position: relative;
         display: block;
@@ -108,10 +109,10 @@ export const StyledSearchForm = styled.form`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: ${(props)=> props.theme.greyColor2};
-        height: 2.5rem;
-        width: 2.5rem;
-        border-radius: 0.65rem;
+        background-color: ${(props)=> props.theme.greyColor};
+        height: 2.75rem;
+        width: 2.75rem;
+        border-radius: 1.5rem;
         border: none;
         outline: none;
         transform: scale(0.7);

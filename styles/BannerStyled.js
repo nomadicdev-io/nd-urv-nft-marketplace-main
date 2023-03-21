@@ -12,8 +12,8 @@ export const StyledBannerSection = styled.section`
 export const StyledBannerWrapper = styled.div`
     position: relative;
     display: grid;
-    grid-template-columns: 60% calc(40% - 5vw);
-    grid-gap: 5vw;
+    grid-template-columns: 60% calc(40% - 7.5rem);
+    grid-gap: 7.5rem;
     align-items: center;
     width: 100%;
     height: auto;

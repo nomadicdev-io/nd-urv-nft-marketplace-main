@@ -62,4 +62,23 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         transition: all 0.3s ease;
     }
+
+    /* Works on Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: ${({theme})=> theme.thirdColor} ${({theme})=> theme.backgroundColor};
+    }
+    
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: ${({theme})=> theme.backgroundColor};
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color:  ${({theme})=> theme.thirdColor};
+    }
 `;
