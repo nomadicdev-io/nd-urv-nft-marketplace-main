@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
     display: block;
     width: 100%;
     height: auto;
-    padding: 5rem 0;
+    padding: 5rem 0 1.5rem;
     margin-top: 6.5em;
     background-color: ${({theme})=> theme.backgroundColor};
 `;

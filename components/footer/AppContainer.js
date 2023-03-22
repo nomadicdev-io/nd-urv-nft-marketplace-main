@@ -25,7 +25,7 @@ const AppContainer = () => {
                             <Image src={androidicon} alt={'Download iOS'} />
                         </li>
                     </ul>
-                </StyledFooterAppContent>
+                </StyledFooterAppContent>   
             </StyledFooterApp>
         </StyledContainer>
     </PageSection>

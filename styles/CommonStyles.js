@@ -59,5 +59,47 @@ export const StyledPageSection = styled.section`
     display: block;
     width: 100%;
     overflow: hidden;
-    padding-top: 7.5rem;
+    padding-top: 6.5rem;
 `;
+
+export const StyledSectionTitleWrapper = styled.div`
+    position: relative;
+    display: flex;
+    align-items: ${({align})=> align ? align: 'center'};
+    justify-content: ${({justify})=> justify ? justify : 'flex-start'};
+    margin-bottom: 1.5rem;
+`;
+
+export const StyledSectionTitle = styled.h2`
+    position: relative;
+    display: block;
+    margin: 0 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+`;
+
+export const StyledContentWrapper = styled.div`
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+`;
+
+export const StyledCommonImageAbsolute = styled(Image)`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+`;
+
+export const StyledGridWrapper = styled.div`
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    grid-gap: 30px;
+`
