@@ -31,6 +31,8 @@ import rw1 from "@/public/nft/RulersOfTheWorld/rw-01.png";
 import rw2 from "@/public/nft/RulersOfTheWorld/rw-02.png";
 import rw3 from "@/public/nft/RulersOfTheWorld/rw-03.png";
 
+import ex from "@/public/exc-banner.jpg";
+
 
 export const logo = logoIcon;
 
@@ -59,3 +61,5 @@ export const niv3 = iv3;
 export const nrw1 = rw1;
 export const nrw2 = rw2;
 export const nrw3 = rw3;
+
+export const exbanner = ex;

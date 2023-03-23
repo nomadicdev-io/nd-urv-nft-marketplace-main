@@ -8,7 +8,7 @@ const BannerNFTCard = ({data}) => {
   return (
     <StyledBannerNFTCardWrapper>
         <StyledCardImageBox paddingTop={'135%'}>
-            <StyledCardImage alt={data.name} src={data.image}/>
+            <StyledCardImage alt={data.name} src={data.image} width={512} height={512}/>
         </StyledCardImageBox>
 
         <StyledBannerNFTAuthor>

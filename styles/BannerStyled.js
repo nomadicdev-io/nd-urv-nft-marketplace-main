@@ -45,11 +45,11 @@ export const StyledBannerContent = styled.div`
         width: 90%;
         line-height: 1.75;
     }
-`
+`;
 
 export const StyledBannerNFT = styled.div`
     position: relative;
     display: block;
     width: 100%;
     height: auto;
-`
+`;

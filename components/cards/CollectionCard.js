@@ -1,10 +1,9 @@
 import { StyledCollectionWrapper } from '@/styles/CardStyles'
 import React from 'react'
-import { MdVerified } from 'react-icons/md';
 import { StyledCommonImageAbsolute } from '@/styles/CommonStyles';
-import { FiArrowRight } from 'react-icons/fi';
-import { FaEthereum, FaHeart } from 'react-icons/fa';
-import { IconButton } from '../Buttons';
+import CardTitle from './CardTitle';
+import FavCount from './FavCount';
+import PriceInfo from './PriceInfo';
 
 const CollectionCard = ({data}) => {
   return (
@@ -16,41 +15,21 @@ const CollectionCard = ({data}) => {
         </div>
 
         <div className='title_wrapper'>
-            <div className='title_with_icon'>
-                <div className='title_'>
-                    <div className='name_'>{data.name}</div>
-                    <div className='username_'>
-                        <span>@{data.username}</span>
-                        {
-                         data.isVerified && <i><MdVerified /></i>
-                        }
-                    </div>
-                </div>
-            </div>
+            <CardTitle 
+                name={data.name}
+                username={data.username}
+                isVerified={data.isVerified}
+            />
 
-            <div className='fav_count'>
-                <i><FaHeart /></i>
-                <span>{data.likes}</span>
-            </div>
+            <FavCount likes={data.likes} />
         </div>
 
         <div className='price_info'>
-            <div className="inner_">
-                        
-                <div className="price_data">
-                    <div className="icon_">
-                        <FaEthereum />
-                    </div>
-                    <div className="price_">
-                        <span>Total Volume</span>
-                        <strong>{data.totalVolume} ETH</strong>
-                    </div>
-                </div>
-
-                <IconButton>
-                    <FiArrowRight />
-                </IconButton>
-            </div>
+           <PriceInfo 
+            name={data.name}
+            priceTitle={'Total Volume'}
+            price={data.totalVolume}
+           />
         </div>
 
     </StyledCollectionWrapper>

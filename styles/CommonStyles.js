@@ -102,4 +102,26 @@ export const StyledGridWrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     grid-gap: 30px;
-`
+`;
+
+export const StyledLoader = styled.div`
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: ${({theme})=> theme.backgroundCOlor};
+    z-index: 99;
+`;
+
+export const StyledFlexWrapper = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1em;
+    margin-top: ${({haveMargin})=> haveMargin ? '1rem' : 0};
+`;

@@ -310,60 +310,6 @@ export const StyledCollectionWrapper = styled(Link)`
         justify-content: space-between;
         grid-gap: 1.25rem;
         padding: 1.25rem 1.25rem 0;
-
-        .title_with_icon{
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            grid-gap: 0.75rem;
-
-            .icon_{
-                position: relative;
-                display: block;
-                width: 2.75rem;
-                height: 2.75rem;
-                border-radius: 1.5rem;
-                overflow: hidden;
-            }
-
-            .title_{
-                position: relative;
-                display: block;
-
-                .name_{
-                    position: relative;
-                    display: block;
-                    font-weight: 600;
-                    font-size: 1rem;
-                }
-
-                .username_{
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    font-size: 0.9rem;
-                    span{
-                        position: relative;
-                        opacity: 0.75;
-                    }
-
-                    i{
-                        position: relative;
-                        display: block;
-                        color: ${({theme})=> theme.primaryColor};
-                        
-                        svg{
-                            position: relative;
-                            display: block;
-                            width: 1rem;
-                            height: auto;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .images_grid{
@@ -443,40 +389,7 @@ export const StyledCollectionWrapper = styled(Link)`
         }
     }
 
-    .fav_count{
-        position: relative;
-        background-color: #ffffff1c;
-        backdrop-filter: blur(3px);
-        height: 2.75rem;
-        width: auto;
-        padding: 0 0.75em;
-        border-radius: 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        z-index: 2;
-        grid-gap: 0.75em;
 
-        i{
-            position: relative;
-            display: block;
-            
-            svg{
-                position: relative;
-                display: block;
-                width: 1.25rem;
-                height: auto;
-                color: ${({theme})=> theme.primaryColor};
-            }
-        }
-
-        span{
-            position: relative;
-            display: block;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-    }
 `;
 
 export const StyledNFTCard = styled.div`
@@ -495,4 +408,246 @@ export const StyledNFTCardLink = styled(Link)`
     background-color: #4c4c4c21;
     backdrop-filter: blur(3px);
     color: ${({theme})=> theme.textColor};
+
+    .image_{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        overflow: hidden;
+        border-radius: 2rem;
+    }
+
+    .content_{
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 1.25rem;
+    }
+`;
+
+export const StyledUserTitle = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 0.75rem;
+
+    .icon_{
+        position: relative;
+        display: block;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+
+    .title_{
+        position: relative;
+        display: block;
+
+        .name_{
+            position: relative;
+            display: block;
+            font-weight: 600;
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .username_{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 0.9rem;
+            grid-gap: 0.25em;
+            span{
+                position: relative;
+                opacity: 0.75;
+            }
+
+            i{
+                position: relative;
+                display: block;
+                color: ${({theme})=> theme.primaryColor};
+                
+                svg{
+                    position: relative;
+                    display: block;
+                    width: 1rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+`;
+
+export const StyledFavCount = styled.div`
+    position: relative;
+    background-color: #ffffff1c;
+    backdrop-filter: blur(3px);
+    height: 2.75rem;
+    width: auto;
+    padding: 0 0.75em;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+    grid-gap: 0.75em;
+
+    i{
+        position: relative;
+        display: block;
+        
+        svg{
+            position: relative;
+            display: block;
+            width: 1.25rem;
+            height: auto;
+            color: ${({theme})=> theme.primaryColor};
+        }
+    }
+
+    span{
+        position: relative;
+        display: block;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+`;
+
+export const StyledPriceInfo = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background-color: #ffffff1c;
+    backdrop-filter: blur(3px);
+    border-radius: 2.5rem;
+
+    .price_data {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        grid-gap: 1em;
+
+        .icon_{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #ffffff1f;
+            
+            svg{
+                position: relative;
+                display: block;
+                width: 1rem;
+                height: auto;
+            }
+        }
+
+        .price_{
+            position: relative;
+            display: block;
+
+            span{
+                position: relative;
+                display: block;
+                font-size: 0.75rem;
+            }
+
+            strong{
+                position: relative;
+                display: block;
+                font-size: 1rem;
+            }
+        }
+    }
+`;
+
+export const StyledPriceInfoSimple = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .price_{
+        position: relative;
+        display: block;
+
+        span{
+            position: relative;
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.75;
+            line-height: 2;
+        }
+
+        strong{
+            position: relative;
+            display: block;
+            font-size: 1rem;
+        }
+    }
+`;
+
+export const StyledExclusiveBanner = styled.div`
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid ${({theme})=> theme.thirdColor};
+    overflow: hidden;
+
+    .bg_{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgb(19,19,19);
+            background: linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 100%);
+        }
+    }
+
+    .content_{
+        position: relative;
+        display: block;
+        width: 75%;
+        height: auto;
+
+        h2{
+            position: relative;
+            display: block;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+
+            strong{
+                color: ${({theme})=> theme.primaryColor};
+            }
+        }
+    }
 `;

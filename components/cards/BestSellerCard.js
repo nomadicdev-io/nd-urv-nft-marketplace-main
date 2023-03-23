@@ -8,12 +8,12 @@ const BestSellerCard = ({data}) => {
 
       <StyledSellersCardTop>
         <StyledSellersBanner>
-          <StyledSellersBannerImage src={data.banner} alt={data.name}/>
+          <StyledSellersBannerImage src={data.banner} alt={data.name} width={320} height={180}/>
         </StyledSellersBanner>
 
         <StyledSellerProfileIcon>
           <div className="icon_">
-            <StyledCommonImageAbsolute alt={data.name} src={data.image}/>
+            <StyledCommonImageAbsolute alt={data.name} src={data.image} width={100} height={100}/>
           </div>
         </StyledSellerProfileIcon>
 
