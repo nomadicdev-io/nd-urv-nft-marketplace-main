@@ -88,7 +88,7 @@ const HomeTrending = () => {
     <PageSection>
         <StyledContainer>
             <SectionTItle title={'Trending Now'} justify={'space-between'}>
-              <PrimaryButtonLink grey={true} href={'/collections'} title={'View All'}>
+              <PrimaryButtonLink grey={true} href={'/trending'} title={'View All'}>
                   <i><FiArrowRight /></i>
               </PrimaryButtonLink>
             </SectionTItle>

@@ -22,7 +22,7 @@ const NFTCard = ({data}) => {
 
               <StyledFlexWrapper haveMargin={true}>
                 <PriceInfoSimple price={data.price} priceTitle={'Current Price'} />
-                <IconButton grey={true}>
+                <IconButton grey='true'>
                   <FiArrowUpRight />
                 </IconButton>
               </StyledFlexWrapper>
@@ -34,4 +34,4 @@ const NFTCard = ({data}) => {
   )
 }
 
-export default NFTCard
+export default NFTCard 
